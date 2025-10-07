@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Authentication</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form class="sign-in-form" onsubmit="handleLogin(event)">
+                    <h2 class="title">Welcome Back</h2>
+                    <div class="input-field">
+                        <i>📧</i>
+                        <input type="email" placeholder="Email" required />
+                    </div>
+                    <div class="input-field">
+                        <i>🔒</i>
+                        <input type="password" placeholder="Password" required />
+                    </div>
+                    <input type="submit" value="Login" class="btn solid" />
+                </form>
+
+                <form class="sign-up-form" onsubmit="handleRegister(event)">
+                    <h2 class="title">Create Account</h2>
+                    <div class="input-field">
+                        <i>👤</i>
+                        <input type="text" placeholder="Username" required />
+                    </div>
+                    <div class="input-field">
+                        <i>📧</i>
+                        <input type="email" placeholder="Email" required />
+                    </div>
+                    <div class="input-field">
+                        <i>🔒</i>
+                        <input type="password" placeholder="Password" required />
+                    </div>
+                    <input type="submit" value="Sign Up" class="btn" />
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>New here?</h3>
+                    <p>
+                        Join our community today! Create an account and discover amazing features waiting for you.
+                    </p>
+                    <button class="btn transparent" id="sign-up-btn">
+                        Sign Up
+                    </button>
+                </div>
+                <div class="image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgba(255,255,255,0.9);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgba(255,255,255,0.5);stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="200" cy="150" r="100" fill="url(#grad1)" opacity="0.3"/>
+                        <path d="M200 80 L220 120 L270 120 L230 150 L245 195 L200 165 L155 195 L170 150 L130 120 L180 120 Z" fill="url(#grad1)"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Already a member?</h3>
+                    <p>
+                        Welcome back! Sign in to access your account and continue your journey with us.
+                    </p>
+                    <button class="btn transparent" id="sign-in-btn">
+                        Sign In
+                    </button>
+                </div>
+                <div class="image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+                        <defs>
+                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgba(255,255,255,0.9);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgba(255,255,255,0.5);stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="200" cy="150" r="100" fill="url(#grad2)" opacity="0.3"/>
+                        <rect x="160" y="100" width="80" height="100" rx="10" fill="url(#grad2)"/>
+                        <circle cx="200" cy="130" r="20" fill="rgba(102, 126, 234, 0.8)"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-message" id="successMessage"></div>
+
+</body>
+</html>
